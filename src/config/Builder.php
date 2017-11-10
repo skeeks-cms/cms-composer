@@ -10,5 +10,5 @@ namespace skeeks\cms\composer\config;
  * Class Buider
  * @package skeeks\cms\composer\config
  */
-class Buider extends \hiqdev\composer\config\Builder
+class Builder extends \hiqdev\composer\config\Builder
 {}
