@@ -27,8 +27,12 @@ class Installer extends LibraryInstaller
                 {
                     $dir = realpath($dir);
                     echo "\tclear dir: {$dir}\n";
-                    FileHelper::removeDirectory($dir);
-                    FileHelper::createDirectory($dir);
+                    try {
+                        FileHelper::removeDirectory($dir);
+                        FileHelper::createDirectory($dir);
+                    } catch (\Exception $e) {
+                        echo "\t\t error: {$e->getMessage()}\n";
+                    }
                 }
             }
         }
